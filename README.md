@@ -50,7 +50,29 @@ data.load()
 python3 ./get_genre.py <pathtofilename>
 ```
 
-In the end, the expected classification for each chunk is outputted along with the final predicted year.
+In the end, the expected classification for each chunk is outputted along with the final predicted year. For example:
+
+```
+~/hlazu/music-genre-classification/src$ /usr/bin/python3.8 get_genre.py ~/files/genres/2000/Savage\ Garden\ -\ I\ Knew\ I\ Loved\ You\ \(Official\ Video\)-jjnmICxvoVY.wav 
+29.9542179107666
+44.364620208740234
+44.00571060180664
+21.105619430541992
+31.873672485351562
+37.884220123291016
+43.597721099853516
+41.68931198120117
+...
+42.107696533203125
+43.88893127441406
+37.91337585449219
+36.08418655395508
+13.254826545715332
+10.613168716430664
+Predicted: 1998.2867131171288
+```
+
+The predicted value at the end is the final answer. The intermediate values outputted are the number of years after 1960 that the model predicts for an individual chuns, as the model partitions songs into smaller chunks and takes the average to produce the final answer.
 
 ### Classical Machine Learning Models (Linear Regression, Decision Tree, Random Forest, Support Vector Regression)
 The original implementation for music genre classification was based on the <a href="">gtzan</a> repository. Each of the models in the original repository were changed to support regression rather than classification. The logstic regression was changed to linear regression, decision tree classification was changed to decision tree regression, random forest classification was changed to random forest regression, and support vector machine was changed to support vector regression.
