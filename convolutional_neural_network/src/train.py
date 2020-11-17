@@ -56,37 +56,7 @@ def main():
             x_train_batch, y_train_batch = inp_train[i:i + BATCH_SIZE], out_train[i:i + BATCH_SIZE]
 
             pred_train_batch    = net(x_train_batch)
-            #print(pred_train_batch)
-            #print(y_train_batch)
             loss_train_batch    = criterion(pred_train_batch, y_train_batch)
-            
-            #loss_train_batch.data.cpu()
-
-            #print("test data/item at 0")
-            #print(loss_train_batch.data[0])
-            #print(loss_train_batch.data.items(0))
-
-            #train_loss         += loss_train_batch.data[0]
-
-            #loss_train_batch_data.cpu().numpy() #we might be able to remove numpy, this is to move the data into the cpu
-            #edited code
-            """
-            print("fwd loss train batch:")
-            print(loss_train_batch)
-            print("with data:")
-            print(loss_train_batch.data)
-            print("with cpu")
-            print(loss_train_batch.cpu())
-            print("with numpy")
-            print(loss_train_batch.data.cpu().numpy())
-            print("numpy edits:")
-            print(loss_train_batch.data[0])
-            #print(loss_train_batch.data.items(0))
-            print("backwards:")
-            print(loss_train_batch.backward())
-            """
-            #end edited code
-
             train_loss          += loss_train_batch.data.cpu().numpy() #[0]
 
             loss_train_batch.backward()

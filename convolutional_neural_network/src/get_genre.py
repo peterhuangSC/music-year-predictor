@@ -50,12 +50,6 @@ def main(argv):
         print(pred_val)
         added += pred_val
         total += 1
-        #pred_val, pred_index    = preds.item()
-        #pred_index              = pred_index.data.numpy()
-        #pred_val                = np.exp(pred_val.data.numpy()[0])
-        #pred_genre              = le.inverse_transform(pred_index).item()
-        #if pred_val >= 0.03: #0.5
-        #    genres.append(pred_genre)
     # ------------------------------- #
     print('Predicted: {}'.format((added/total) + 1960))
     s           = float(sum([v for k,v in dict(Counter(genres)).items()]))

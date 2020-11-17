@@ -22,7 +22,7 @@ The dataset used for training was the Billboard Top 100 for the years 1960 to 20
 
 
 ### Convolutional Neural Network (CNN)
-The base implementation of this work was based on the <a href="">blah</a> repository, with adaptions made to accomodate for not using a classifier, but instead regression. In order to install, the following must be done:
+The base implementation of this work was based on the <a href="https://github.com/cetinsamet/music-genre-classification">music-genre-classification</a> repository, with adaptions made to accomodate for not using a classifier, but instead regression. In order to install, the following must be done:
 
 1. Install Python3.8
 2. Install NumPy, SciPy along with PyTorch
@@ -47,7 +47,7 @@ data.load()
 3. We can then test the music release year prediction using the following command:
 
 ```sh
-python3 ./genre.py <pathtofilename>
+python3 ./get_genre.py <pathtofilename>
 ```
 
 In the end, the expected classification for each chunk is outputted along with the final predicted year.
