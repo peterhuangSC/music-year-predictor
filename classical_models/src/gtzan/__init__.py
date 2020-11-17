@@ -14,18 +14,8 @@ class AppManager:
         self.genres = genres
 
     def run(self):
-        if self.args.type == "ml":
-            X = make_dataset_ml(self.args)
-            pipe = load(self.args.model)
-            tmp = pipe.predict(X)
-            pred = get_genres(tmp[0], self.genres)
-            print("predicted: {}".format(pred))
-
-        else:
-            X = make_dataset_dl(self.args)
-            model = load_model(self.args.model)
-
-            preds = model.predict(X)
-            votes = majority_voting(preds, self.genres)
-            print("{} is a {} song".format(self.args.song, votes[0][0]))
-            print("most likely genres are: {}".format(votes[:3]))
+        X = make_dataset_ml(self.args)
+        pipe = load(self.args.model)
+        tmp = pipe.predict(X)
+        pred = get_genres(tmp[0], self.genres)
+        print("predicted: {}".format(pred))

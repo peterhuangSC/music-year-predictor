@@ -8,8 +8,8 @@ for i in range(0, 60):
 
 # @RUN: Main function to call the appmanager
 def main(args):
-    if args.type not in ["dl", "ml"]:
-        raise ValueError("Invalid type for the application. You should use dl or ml.")
+    if args.type not in ["ml"]:
+        raise ValueError("Invalid type for the application.")
 
     app = AppManager(args, genres)
     app.run()

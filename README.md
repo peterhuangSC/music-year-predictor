@@ -44,7 +44,7 @@ data = Data(GENRES, DATAPATH)
 data.load()
 ```
 
-3. We can then test the genre classifcation using the following command:
+3. We can then test the music release year prediction using the following command:
 
 ```sh
 python3 ./genre.py <pathtofilename>
@@ -52,6 +52,23 @@ python3 ./genre.py <pathtofilename>
 
 In the end, the expected classification for each chunk is outputted along with the final predicted year.
 
+### Classical Machine Learning Models (Linear Regression, Decision Tree, Random Forest, Support Vector Regression)
+The original implementation for music genre classification was based on the <a href="">gtzan</a> repository. Each of the models in the original repository were changed to support regression rather than classification. The logstic regression was changed to linear regression, decision tree classification was changed to decision tree regression, random forest classification was changed to random forest regression, and support vector machine was changed to support vector regression.
+
+1. Install Python3.7
+2. Install Latest SKLearn, Pandas, IPython, NBConvert
+
+In order to train the models:
+1. Go to the classical_models directory and invoke `python3 -m IPython train_classical_models.py`. This will extract the features from the songs in the music repository and create models for linear regression, decision trees, random forests, and support vector regression.
+
+In order to run the models:
+1. We can then test the music year prediction using the following command:
+
+```sh
+/usr/bin/python3 app.py -t ml -m ../models/pipe_lr.joblib -s <path_to_song>
+```
+The final predicted year is outputted for the specified song.
+2. The `../models/pipe_lr.joblib` can be modified to use decision trees (pipe_cart), random forest (pipe_rf), or support vector regression (pipe_svr)
 
 
 ### Scripts
