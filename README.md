@@ -75,7 +75,7 @@ Predicted: 1998.2867131171288
 The predicted value at the end is the final answer. The intermediate values outputted are the number of years after 1960 that the model predicts for an individual chuns, as the model partitions songs into smaller chunks and takes the average to produce the final answer.
 
 ### Classical Machine Learning Models (Linear Regression, Decision Tree, Random Forest, Support Vector Regression)
-The original implementation for music genre classification was based on the <a href="">gtzan</a> repository. Each of the models in the original repository were changed to support regression rather than classification. The logstic regression was changed to linear regression, decision tree classification was changed to decision tree regression, random forest classification was changed to random forest regression, and support vector machine was changed to support vector regression.
+The original implementation for music genre classification was based on the <a href="https://github.com/Hguimaraes/gtzan.keras">gtzan</a> repository. Each of the models in the original repository were changed to support regression rather than classification. The logstic regression was changed to linear regression, decision tree classification was changed to decision tree regression, random forest classification was changed to random forest regression, and support vector machine was changed to support vector regression.
 
 1. Install Python3.7
 2. Install Latest SKLearn, Pandas, IPython, NBConvert
